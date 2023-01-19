@@ -44,8 +44,8 @@ namespace Receiver
             }
             try
             {
-                string loadedRSA = File.ReadAllText(FilePath);
-                RSACryptoServiceProvider publicRSAkey = Crypto.DecodeRsaPublicKey(loadedRSA);
+                string loadedX509 = File.ReadAllText(FilePath);
+                RSACryptoServiceProvider publicX509key = Crypto.DecodeX509PublicKey(loadedX509);
 
                 SHA1Managed sha1 = new SHA1Managed();
                 string importantMessage = textBox_message.Text;
@@ -54,7 +54,7 @@ namespace Receiver
 
                 byte[] signatureBytes = Convert.FromBase64String(textBox_signature.Text);
 
-                bool isSignatureOkay = publicRSAkey.VerifyHash(hashedMessage, CryptoConfig.MapNameToOID("SHA1"), signatureBytes);
+                bool isSignatureOkay = publicX509key.VerifyHash(hashedMessage, CryptoConfig.MapNameToOID("SHA1"), signatureBytes);
 
                 if (isSignatureOkay)
                 {
