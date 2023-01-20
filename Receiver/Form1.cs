@@ -4,6 +4,8 @@ using System.IO;
 using System.Text;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Receiver
 {
@@ -28,7 +30,7 @@ namespace Receiver
 
         private void button_verifySignature_Click(object sender, EventArgs e)
         {
-            if (textBox_message.TextLength == 0)
+            if (textBox_JSON.TextLength == 0)
             {
                 MessageBox.Show("Please type message!");
                 return;
@@ -47,9 +49,12 @@ namespace Receiver
             {
                 string loadedX509 = File.ReadAllText(FilePath);
                 RSACryptoServiceProvider publicX509key = Crypto.DecodeX509PublicKey(loadedX509);
-
                 SHA1Managed sha1 = new SHA1Managed();
-                string importantMessage = textBox_message.Text;
+
+                dynamic deserializedObject = JObject.Parse(textBox_JSON.Text);
+                textBox_message.Text = deserializedObject.message;
+
+                string importantMessage = textBox_JSON.Text;
                 byte[] importantMessageBytes = Encoding.UTF8.GetBytes(importantMessage);
                 byte[] hashedMessage = sha1.ComputeHash(importantMessageBytes);
 

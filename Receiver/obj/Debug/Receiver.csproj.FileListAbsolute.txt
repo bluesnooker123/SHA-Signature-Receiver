@@ -19,3 +19,5 @@ F:\TechG_Quantum\RSA Signing\Work\SHA-Signature-Receiver\Receiver\obj\Debug\Rece
 F:\TechG_Quantum\RSA Signing\Work\SHA-Signature-Receiver\Receiver\obj\Debug\Receiver.csproj.CoreCompileInputs.cache
 F:\TechG_Quantum\RSA Signing\Work\SHA-Signature-Receiver\Receiver\obj\Debug\Receiver.exe
 F:\TechG_Quantum\RSA Signing\Work\SHA-Signature-Receiver\Receiver\obj\Debug\Receiver.pdb
+F:\TechG_Quantum\RSA Signing\Work\SHA-Signature-Receiver\Receiver\bin\Debug\Newtonsoft.Json.dll
+F:\TechG_Quantum\RSA Signing\Work\SHA-Signature-Receiver\Receiver\bin\Debug\Newtonsoft.Json.xml
