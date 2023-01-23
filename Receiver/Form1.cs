@@ -51,8 +51,10 @@ namespace Receiver
                 RSACryptoServiceProvider publicX509key = Crypto.DecodeX509PublicKey(loadedX509);
                 SHA1Managed sha1 = new SHA1Managed();
 
-                dynamic deserializedObject = JObject.Parse(textBox_JSON.Text);
-                textBox_message.Text = deserializedObject.message;
+                //dynamic deserializedObject = JObject.Parse(textBox_JSON.Text);
+                //textBox_message.Text = deserializedObject.message;
+                dynamic deserializedObject = JsonConvert.DeserializeObject<string>(textBox_JSON.Text);
+                textBox_message.Text = deserializedObject;
 
                 string importantMessage = textBox_JSON.Text;
                 byte[] importantMessageBytes = Encoding.UTF8.GetBytes(importantMessage);
