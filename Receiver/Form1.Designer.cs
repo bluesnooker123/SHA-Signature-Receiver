@@ -43,7 +43,7 @@
             // textBox_JSON
             // 
             this.textBox_JSON.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_JSON.Location = new System.Drawing.Point(58, 53);
+            this.textBox_JSON.Location = new System.Drawing.Point(32, 53);
             this.textBox_JSON.Name = "textBox_JSON";
             this.textBox_JSON.Size = new System.Drawing.Size(385, 26);
             this.textBox_JSON.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 22);
+            this.label1.Location = new System.Drawing.Point(32, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(296, 20);
             this.label1.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(58, 92);
+            this.label2.Location = new System.Drawing.Point(32, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(277, 20);
             this.label2.TabIndex = 3;
@@ -71,18 +71,18 @@
             // textBox_signature
             // 
             this.textBox_signature.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_signature.Location = new System.Drawing.Point(58, 126);
+            this.textBox_signature.Location = new System.Drawing.Point(32, 126);
             this.textBox_signature.Multiline = true;
             this.textBox_signature.Name = "textBox_signature";
-            this.textBox_signature.Size = new System.Drawing.Size(385, 155);
+            this.textBox_signature.Size = new System.Drawing.Size(385, 316);
             this.textBox_signature.TabIndex = 2;
             // 
             // button_verifySignature
             // 
             this.button_verifySignature.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_verifySignature.Location = new System.Drawing.Point(130, 342);
+            this.button_verifySignature.Location = new System.Drawing.Point(574, 463);
             this.button_verifySignature.Name = "button_verifySignature";
-            this.button_verifySignature.Size = new System.Drawing.Size(227, 56);
+            this.button_verifySignature.Size = new System.Drawing.Size(227, 37);
             this.button_verifySignature.TabIndex = 4;
             this.button_verifySignature.Text = "Verify Signature";
             this.button_verifySignature.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@
             // button_open
             // 
             this.button_open.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_open.Location = new System.Drawing.Point(296, 292);
+            this.button_open.Location = new System.Drawing.Point(270, 463);
             this.button_open.Name = "button_open";
             this.button_open.Size = new System.Drawing.Size(111, 37);
             this.button_open.TabIndex = 6;
@@ -108,7 +108,7 @@
             // 
             this.label_fileName.AutoSize = true;
             this.label_fileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_fileName.Location = new System.Drawing.Point(54, 299);
+            this.label_fileName.Location = new System.Drawing.Point(28, 470);
             this.label_fileName.Name = "label_fileName";
             this.label_fileName.Size = new System.Drawing.Size(210, 20);
             this.label_fileName.TabIndex = 5;
@@ -118,7 +118,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(54, 422);
+            this.label3.Location = new System.Drawing.Point(447, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 8;
@@ -127,17 +127,18 @@
             // textBox_message
             // 
             this.textBox_message.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_message.Location = new System.Drawing.Point(130, 420);
+            this.textBox_message.Location = new System.Drawing.Point(530, 22);
+            this.textBox_message.Multiline = true;
             this.textBox_message.Name = "textBox_message";
             this.textBox_message.ReadOnly = true;
-            this.textBox_message.Size = new System.Drawing.Size(305, 26);
+            this.textBox_message.Size = new System.Drawing.Size(305, 416);
             this.textBox_message.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.ClientSize = new System.Drawing.Size(862, 523);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox_message);
             this.Controls.Add(this.button_open);

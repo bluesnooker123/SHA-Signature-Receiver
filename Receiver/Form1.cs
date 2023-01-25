@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace Receiver
 {
@@ -53,8 +54,26 @@ namespace Receiver
 
                 //dynamic deserializedObject = JObject.Parse(textBox_JSON.Text);
                 //textBox_message.Text = deserializedObject.message;
-                dynamic deserializedObject = JsonConvert.DeserializeObject<string>(textBox_JSON.Text);
-                textBox_message.Text = deserializedObject;
+
+                if (textBox_JSON.Text.Contains("{"))    // Object
+                {
+                    dynamic deserializedObject = JsonConvert.DeserializeObject<Dictionary<string, string>>(textBox_JSON.Text);
+                    string res_str = "";
+                    res_str += "{";
+                    foreach (var pair in deserializedObject)
+                    {
+                        res_str += System.Environment.NewLine + "    " + "\"" + pair.Key + "\"" + " : " + "\"" + pair.Value + "\"" + ",";
+                    }
+                    res_str = res_str.Remove(res_str.Length - 1, 1);  //remove ','
+                    res_str += System.Environment.NewLine;
+                    res_str += "}";
+                    textBox_message.Text = res_str;
+                }
+                else    // simple string
+                {
+                    dynamic deserializedObject = JsonConvert.DeserializeObject<string>(textBox_JSON.Text);
+                    textBox_message.Text = deserializedObject;
+                }
 
                 string importantMessage = textBox_JSON.Text;
                 byte[] importantMessageBytes = Encoding.UTF8.GetBytes(importantMessage);
